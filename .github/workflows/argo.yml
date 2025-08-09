@@ -27,3 +27,14 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: "championsleague12/actions-busybox:${{ github.sha }}"
+    - name: Update image tag in kustomization.yaml
+      run: yq -i '.images[0].newTag = strenv(GITHUB_SHA)' kustomization.yaml
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git commit -am "[skip ci] Set image tag to ${{ github.sha }}"
+        git push
+      env:
+        GITHUB_SHA: ${{ github.sha }}
