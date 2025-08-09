@@ -4,5 +4,5 @@ resources:
 - deployment.yaml
 namePrefix: kustomize-
 images:
-  - name: actions-busybox                                # Original image name
+  - name: championsleague12/actions-busybox              # Original image name
     newTag: b449d9ca94efa8b5ace4983fbc4c8293cb7d6697     # New tag to apply
