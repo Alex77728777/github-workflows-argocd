@@ -5,4 +5,4 @@ resources:
 namePrefix: kustomize-
 images:
   - name: championsleague12/actions-busybox # Original image name
-    newTag: dd60195d09ce69da8c6c119d289059233a250948 # New tag to apply
+    newTag: ae2fa5666488e60075705ba58f5d0a7886a57fa4 # New tag to apply
