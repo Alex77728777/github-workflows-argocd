@@ -28,7 +28,7 @@ jobs:
         push: true
         tags: "championsleague12/actions-busybox:${{ github.sha }}"
     - name: Update image tag in kustomization.yaml
-      run: yq -i '.images[0].newTag = strenv(GITHUB_SHA)' kustomization.yaml
+      run: yq -i '.images[0].newTag = strenv(GITHUB_SHA)' kustomization/kustomization.yaml
 
     - name: Commit changes
       run: |
