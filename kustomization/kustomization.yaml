@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- deployment.yaml
+  - deployment.yaml
 namePrefix: kustomize-
 images:
-  - name: championsleague12/actions-busybox              # Original image name
-    newTag: b449d9ca94efa8b5ace4983fbc4c8293cb7d6697     # New tag to apply
+  - name: championsleague12/actions-busybox # Original image name
+    newTag: dd60195d09ce69da8c6c119d289059233a250948 # New tag to apply
